@@ -23,18 +23,21 @@ body {
 /* Header section with background GIF */
 .header {
     background: url('https://raw.githubusercontent.com/Danzee988/Danzee988.github.io/master/assets/Cyber_Attack.gif') no-repeat center center;
-    background-size: contain; /* Keeps the aspect ratio while fitting the image */
-    background-position: center center; /* Ensures the center of the GIF stays in focus */
+    background-size: contain; /* Ensures the entire GIF fits within the header */
+    background-position: center center; /* Keeps the GIF centered */
+    height: 500px; /* Adjust height of the header */
     color: white;
-    padding: 80px 0;
+    padding: 0; /* Remove padding to keep the header clean */
     text-align: center;
     border-bottom: 5px solid #333;
     position: relative;
-    background-attachment: fixed; /* Optional: Keeps the background fixed during scrolling */
+    overflow: hidden; /* Ensures content inside header is clipped if needed */
 }
 
+/* Container inside the header for text positioning */
 .header .container {
-    position: relative; /* Ensures text stays above the background */
+    position: relative;
+    z-index: 1; /* Ensures text is above the background */
 }
 
 .header h1 {
