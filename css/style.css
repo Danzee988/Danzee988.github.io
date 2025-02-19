@@ -75,6 +75,22 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better visibility */
 }
 
+/* Image container inside the header */
+.image-container {
+    width: 150px; /* Set the width of the image container */
+    height: auto;
+    margin-right: 20px; /* Optional: Adds spacing between the image and text */
+    display: inline-block;
+    text-align: center; /* Centers the image inside the container */
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%; /* Ensures the image fits within the container */
+    height: auto; /* Keeps the aspect ratio of the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+
 /* Project description section */
 .project-description {
     background-color: rgb(87, 82, 82, 0.8);
