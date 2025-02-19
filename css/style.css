@@ -23,37 +23,66 @@ body {
 /* Header section with background GIF */
 .header {
     background: url('https://raw.githubusercontent.com/Danzee988/Danzee988.github.io/master/assets/Cyber_Attack.gif') no-repeat center center;
-    background-size: contain; /* Ensures the entire GIF fits within the header */
-    background-position: center center; /* Keeps the GIF centered */
-    height: 500px; /* Adjust height of the header */
+    background-size: cover; /* Ensures the GIF stretches horizontally while keeping the aspect ratio */
+    background-position: center center;
+    height: 500px;
     color: white;
-    padding: 0; /* Remove padding to keep the header clean */
     text-align: center;
     border-bottom: 5px solid #333;
     position: relative;
-    overflow: hidden; /* Ensures content inside header is clipped if needed */
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay to improve text visibility */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    z-index: 0; /* Position the overlay behind the text */
 }
 
 /* Container inside the header for text positioning */
 .header .container {
     position: relative;
-    z-index: 1; /* Ensures text is above the background */
+    z-index: 1; /* Ensures text stays above the overlay */
 }
 
+/* Header text styling */
+.header h1, .header h2, .header h3 {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    z-index: 1; /* Keep text above overlay */
+}
+
+/* Header title styling */
 .header h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better visibility */
 }
 
+/* Header subtitle styling */
 .header h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better visibility */
 }
 
+/* Header warning text styling */
 .header h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 15px;
     font-weight: normal;
+    color: red; /* Red for warning */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better visibility */
 }
 
 /* Project description section */
